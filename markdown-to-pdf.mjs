@@ -24,7 +24,6 @@ doc.font(fontPath);
 
 function plain(text = '') {
   const html = /** @type string */ (marked.parseInline(text));
-  console.log(html);
   return decode(
     html
       .replace(/\n/gi, ' ')
