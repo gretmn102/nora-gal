@@ -1,0 +1,17 @@
+{
+  "name": "nora-gal",
+  "version": "1.0.0",
+  "description": "**Редактор школы Норы Галь: убирает канцелярит, лечит переводы, возвращает тексту жизнь.**",
+  "main": "index.js",
+  "scripts": {
+    "build": "node markdown-to-pdf.mjs"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "he": "^2.0.0",
+    "marked": "^18.1.1",
+    "pdfkit": "^0.20.2"
+  }
+}
