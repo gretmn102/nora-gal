@@ -37,17 +37,17 @@ for (const token of tokens) {
   switch (token.type) {
     case 'heading':
       doc.moveDown(0.5);
-      doc.fontSize(token.depth === 1 ? 22 : 18).text(plain(token.text));
-      doc.fontSize(12).moveDown(0.5);
+      doc.fontSize(token.depth === 1 ? 18 : 14).text(plain(token.text));
+      doc.fontSize(8).moveDown(0.5);
       break;
 
     case 'paragraph':
-      doc.fontSize(12).text(plain(token.text), { paragraphGap: 8 });
+      doc.fontSize(8).text(plain(token.text), { paragraphGap: 8 });
       break;
 
     case 'list':
       for (const item of token.items) {
-        doc.fontSize(12).text(
+        doc.fontSize(8).text(
           `${token.ordered ? '•' : '•'}  ${plain(item.text)}`,
           { indent: 12, paragraphGap: 4 },
         );
@@ -56,12 +56,12 @@ for (const token of tokens) {
       break;
 
     case 'code':
-      doc.fontSize(10).text(token.text, { indent: 12 });
-      doc.fontSize(12).moveDown();
+      doc.fontSize(6).text(token.text, { indent: 12 });
+      doc.fontSize(8).moveDown();
       break;
 
     case 'blockquote':
-      doc.fontSize(12).text(plain(token.text), { indent: 20 });
+      doc.fontSize(8).text(plain(token.text), { indent: 20 });
       doc.moveDown();
       break;
 
